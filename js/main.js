@@ -41,19 +41,20 @@ var button = document.getElementById('speak');
 var technique = new SpeechSynthesisUtterance();
 
 button.addEventListener('click', function(e) {
+    const loopLength = kibonsoo.length;
+    const shuffledkbs = shuffle(kibonsoo);
+    console.log(shuffledkbs);
     (function theLoop (i) {
         setTimeout(function () {
-            const shuffledkbs = shuffle(kibonsoo);
-            console.log(shuffledkbs);
             technique.voiceURI = "fiona";
-            technique.lang = "en-scotland";
+            technique.lang = "en";
             technique.text = shuffledkbs[i-1];
             speechSynthesis.speak(technique);
             if (--i) {
                 theLoop(i);
             }
-        }, 1000);
-    })(shuffledkbs.length);
+        }, 1500);
+    })(loopLength);
 });
 
 /*
