@@ -1,14 +1,4 @@
 
-/*
-const msg = new SpeechSynthesisUtterance();
-
-msg.volume = 1;
-msg.rate = 1;
-msg.pitch = 1;
-//msg.text = "Key Bon Soo";
-msg.voiceURI = "Fiona";
-msg.lang = "en-scotland";
-*/
 
 // Init the Ki Bon Soo array
 const kibonsoo =   ['key bon soo one',
@@ -46,17 +36,15 @@ function shuffle(arra1) {
     return arra1;
 }
 
-const shuffledkbs = shuffle(kibonsoo);
-console.log(shuffledkbs);
+var button = document.getElementById('speak');
 
 var technique = new SpeechSynthesisUtterance();
-
-
-var button = document.getElementById('speak');
 
 button.addEventListener('click', function(e) {
     (function theLoop (i) {
         setTimeout(function () {
+            const shuffledkbs = shuffle(kibonsoo);
+            console.log(shuffledkbs);
             technique.voiceURI = "fiona";
             technique.lang = "en-scotland";
             technique.text = shuffledkbs[i-1];
@@ -69,15 +57,6 @@ button.addEventListener('click', function(e) {
 });
 
 /*
-const msg = new SpeechSynthesisUtterance();
-
-msg.volume = 1;
-msg.rate = 1;
-msg.pitch = 1;
-msg.voiceURI = "Fiona";
-msg.lang = "en-scotland";
-
-
 
 // Init the Ki Bohn Soo array
 const kibonsoo =   ['key bon soo one',
