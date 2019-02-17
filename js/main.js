@@ -1,5 +1,5 @@
 
-
+/*
 const msg = new SpeechSynthesisUtterance();
 
 msg.volume = 1;
@@ -7,6 +7,8 @@ msg.rate = 1;
 msg.pitch = 1;
 msg.voiceURI = "Fiona";
 msg.lang = "en-scotland";
+
+*/
 
 // Init the Ki Bohn Soo array
 const kibonsoo =   ['key bon soo one',
