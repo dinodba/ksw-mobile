@@ -54,7 +54,7 @@ button.addEventListener('click', function(e) {
                 theLoop(i);
             }
         }, 1500);
-    })(loopLength);
+    })(3);
 });
 
 /*
