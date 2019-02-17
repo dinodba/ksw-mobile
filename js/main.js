@@ -53,7 +53,7 @@ button.addEventListener('click', function(e) {
                 theLoop(i);
             }
         }, 1000);
-    })(3);
+    })(shuffledkbs.length);
 });
 
 /*
