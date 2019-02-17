@@ -41,9 +41,6 @@ var button = document.getElementById('speak');
 var technique = new SpeechSynthesisUtterance();
 
 button.addEventListener('click', function(e) {
-    const loopLength = kibonsoo.length;
-    const shuffledkbs = shuffle(kibonsoo);
-    console.log(shuffledkbs);
     (function theLoop (i) {
         setTimeout(function () {
             technique.voiceURI = "fiona";
