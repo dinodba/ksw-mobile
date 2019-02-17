@@ -40,6 +40,8 @@ var button = document.getElementById('speak');
 
 var technique = new SpeechSynthesisUtterance();
 
+const shuffledkbs = shuffle(kibonsoo);
+
 button.addEventListener('click', function(e) {
     (function theLoop (i) {
         setTimeout(function () {
