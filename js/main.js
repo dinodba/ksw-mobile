@@ -63,18 +63,20 @@ function shuffle(arra1) {
 
 var technique = new SpeechSynthesisUtterance();
 
+const shuffledkbs = shuffle(kibonsoo);
+
 // Get the 'speak' button
 var button = document.getElementById('speak');
 
 button.addEventListener('click', function(e) {
-    var secondsDelay = document.getElementById("speakDelay").value*1000 || 2000;
-    console.log(secondsDelay);
-    const shuffledkbs = shuffle(kibonsoo);
-    console.log(shuffledkbs);
-    console.log(shuffledkbs.length);
+    //var secondsDelay = document.getElementById("speakDelay").value*1000 || 2000;
+    //console.log(secondsDelay);
+    //const shuffledkbs = shuffle(kibonsoo);
+    //console.log(shuffledkbs);
+    //console.log(shuffledkbs.length);
     (function theLoop (i) {
         setTimeout(function () {
-            technique.voiceURI = "fiona";
+            technique.voiceURI = "Fiona";
             technique.lang = "en-scotland";
             technique.text = shuffledkbs[i-1];
             speechSynthesis.speak(technique);
