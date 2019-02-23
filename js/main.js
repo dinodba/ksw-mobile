@@ -55,6 +55,7 @@ button.addEventListener('click', function(e) {
             if (--i) {
                 theLoop(i);
             }
-        }, 1000);
+        }, 2000);
+        console.log(document.getElementById("speakDelay").value);
     })(shuffledkbs.length);
 });
