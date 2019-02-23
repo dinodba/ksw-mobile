@@ -40,13 +40,12 @@ var button = document.getElementById('speak');
 
 var technique = new SpeechSynthesisUtterance();
 
-const shuffledkbs = shuffle(kibonsoo);
-
 button.addEventListener('click', function(e) {
     (function theLoop (i) {
         setTimeout(function () {
+            const shuffledkbs = shuffle(kibonsoo);
             technique.voiceURI = "fiona";
-            technique.lang = "en";
+            technique.lang = "en-scotland";
             technique.text = shuffledkbs[i-1];
             speechSynthesis.speak(technique);
             if (--i) {
