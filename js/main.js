@@ -37,12 +37,13 @@ function shuffle(arra1) {
 }
 
 
-
 var technique = new SpeechSynthesisUtterance();
 
 var button = document.getElementById('speak');
 
 button.addEventListener('click', function(e) {
+    var secondsDelay = document.getElementById("speakDelay").value*1000 || 1500;
+    console.log(secondsDelay);
     const shuffledkbs = shuffle(kibonsoo);
     console.log(shuffledkbs);
     (function theLoop (i) {
