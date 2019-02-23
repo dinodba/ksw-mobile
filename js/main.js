@@ -36,14 +36,15 @@ function shuffle(arra1) {
     return arra1;
 }
 
-const shuffledkbs = shuffle(kibonsoo);
-console.log(shuffledkbs);
+
 
 var technique = new SpeechSynthesisUtterance();
 
 var button = document.getElementById('speak');
 
 button.addEventListener('click', function(e) {
+    const shuffledkbs = shuffle(kibonsoo);
+    console.log(shuffledkbs);
     (function theLoop (i) {
         setTimeout(function () {
             technique.voiceURI = "fiona";
