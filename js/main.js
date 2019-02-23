@@ -55,6 +55,6 @@ button.addEventListener('click', function(e) {
             if (--i) {
                 theLoop(i);
             }
-        }, document.getElementById("speakDelay").value*1000 || 5000);
+        }, 2000);
     })(shuffledkbs.length);
 });
