@@ -55,6 +55,6 @@ button.addEventListener('click', function(e) {
             if (--i) {
                 theLoop(i);
             }
-        }, 2000);
+        }, 1000);
     })(shuffledkbs.length);
 });
