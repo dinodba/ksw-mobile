@@ -44,7 +44,7 @@ var button = document.getElementById('speak');
 button.addEventListener('click', function(e) {
     const shuffledkbs = shuffle(kibonsoo);
     console.log(shuffledkbs);
-    var secondsDelay = document.getElementById("speakDelay").value*1000 || 1500;
+    var secondsDelay = document.getElementById("speakDelay").value || 2;
     console.log(secondsDelay);
     (function theLoop (i) {
         setTimeout(function () {
@@ -55,6 +55,6 @@ button.addEventListener('click', function(e) {
             if (--i) {
                 theLoop(i);
             }
-        }, 1000);
+        }, 1000*secondsDelay);
     })(shuffledkbs.length);
 });
