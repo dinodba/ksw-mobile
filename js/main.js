@@ -55,6 +55,6 @@ button.addEventListener('click', function(e) {
             if (--i) {
                 theLoop(i);
             }
-        }, secondsDelay);
+        }, 1000);
     })(3);
 });
