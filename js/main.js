@@ -47,11 +47,11 @@ button.addEventListener('click', function(e) {
     var secondsDelay = document.getElementById("speakDelay").value || 2;
     console.log(secondsDelay);
     (function theLoop (i) {
+        technique.voiceURI = "fiona";
+        technique.lang = "en-scotland";
+        technique.text = shuffledkbs[i-1];
+        speechSynthesis.speak(technique);
         setTimeout(function () {
-            technique.voiceURI = "fiona";
-            technique.lang = "en-scotland";
-            technique.text = shuffledkbs[i-1];
-            speechSynthesis.speak(technique);
             if (--i) {
                 theLoop(i);
             }
