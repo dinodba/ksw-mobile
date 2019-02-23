@@ -1,10 +1,10 @@
 
 // Init the Sohn Ppae Ki array
-const sonpaki = ['sohn pa key one',
-                 'sohn pa key two',
-                 'sohn pa key three',
-                 'sohn pa key four',
-                 'sohn pa key five'
+const sonpaki = ['sohn pa keh one',
+                 'sohn pa keh two',
+                 'sohn pa keh three',
+                 'sohn pa keh four',
+                 'sohn pa keh five'
                 ];
 
 // Init the Ki Bon Soo array
@@ -58,13 +58,12 @@ function shuffle(arra1) {
     return arra1;
 }
 
-var allTechniques = [];
-
 var technique = new SpeechSynthesisUtterance();
 
 var button = document.getElementById('speak');
 
 button.addEventListener('click', function(e) {
+    var allTechniques = [];
     var spkCheck = document.getElementById('technique1');
     var kbsCheck = document.getElementById('technique2');
     var smsCheck = document.getElementById('technique3');
