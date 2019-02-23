@@ -87,6 +87,7 @@ button.addEventListener('click', function(e) {
     (function theLoop (i) {
         technique.voiceURI = "fiona";
         technique.lang = "en-scotland";
+        technique.rate = 2;
         technique.text = shuffledTechniques[i-1];
         speechSynthesis.speak(technique);
         setTimeout(function () {
